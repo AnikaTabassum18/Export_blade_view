@@ -1,0 +1,41 @@
+step - 1
+
+blade.php 
+
+add form post method where we write excel button.
+
+
+step - 2
+
+web.php
+
+first write route on web.php.
+
+
+
+step - 3
+
+controller.php
+
+
+secondly write a function. Where I can write some query or other things. It depends on situation. 
+Then write Download or show option.
+
+        return Excel::download(new productsPurchaseExport($data), 'productsPurchaseReportExcel.xlsx');
+
+we can pass data to app/exports/ files by using above line.
+
+
+step - 4
+
+app/exports/files.php
+
+
+Then We need to create a file on app/exports/ folder .
+Where we can add view() function and mention there blade file.
+We can pass data __contruct function to view() function.
+
+
+step-4
+
+normal blade file.
